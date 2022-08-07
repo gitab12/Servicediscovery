@@ -1,0 +1,233 @@
+{
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    },
+
+    "RequestIdKey": "OcRequestId",
+      "AdministrationPath": "/administration"
+    //, "BaseUrl": "https://localhost:5001"
+  },
+
+  "Routes": [
+
+
+    {
+
+      "DownstreamPathTemplate": "/api/Airlines/GetAll",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/Airlines/GetAll",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Airlines/CreateAirlines",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/Airlines/CreateAirlines",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/Auth/Register",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/Auth/Register",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Auth/Login",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/Auth/Login",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+
+
+
+
+    {
+
+      "DownstreamPathTemplate": "/api/Airlines/GetAirlinesById/{id}",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/Airlines/GetAirlinesById/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+
+    {
+
+      "DownstreamPathTemplate": "/api/Airlines/UpdateAirlines",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/Airlines/UpdateAirlines",
+      "UpstreamHttpMethod": [ "Put" ]
+
+    },
+
+    {
+
+      "DownstreamPathTemplate": "/api/Airlines/DeleteAirlines/{id}",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/Airlines/DeleteAirlines/{id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+    {
+
+      "DownstreamPathTemplate": "/api/Airlines/BlockAddAirline",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/Airlines/BlockAddAirline",
+      "UpstreamHttpMethod": [ "Put" ]
+
+    },
+
+    {
+
+      "DownstreamPathTemplate": "/api/AddInventory/CreateInventrory",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/AddInventory/CreateInventrory",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+
+    {
+
+      "DownstreamPathTemplate": "/api/AddInventory/GetAddInventrory",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/AddInventory/GetAddInventrory",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    {
+
+      "DownstreamPathTemplate": "/api/AddInventory/GetAddInventroryById/{id}",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/AddInventory/GetAddInventroryById/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+
+
+
+    {
+
+      "DownstreamPathTemplate": "/api/AddInventory/UpdateAddInventrory",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/AddInventory/UpdateAddInventrory",
+      "UpstreamHttpMethod": [ "Put" ]
+
+    },
+    {
+
+      "DownstreamPathTemplate": "/api/AddInventory/DeleteAddInventrory/{id}",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/AddInventory/DeleteAddInventrory/{id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/AddInventory/Search",
+      "DownstreamScheme": "https",
+      "ServiceName": "AirlinesService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/AddInventory/Search",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    {
+
+      "DownstreamPathTemplate": "/api/TicketBooking/CreateBooking",
+      "DownstreamScheme": "https",
+      "ServiceName": "BookingService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/TicketBooking/CreateBooking",
+      "UpstreamHttpMethod": [ "Post" ]
+
+    },
+    {
+
+      "DownstreamPathTemplate": "/api/TicketBooking/SearchPnr",
+      "DownstreamScheme": "https",
+      "ServiceName": "BookingService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/TicketBooking/SearchPnr",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+
+    {
+
+      "DownstreamPathTemplate": "/api/TicketBooking/SearchEmail",
+      "DownstreamScheme": "https",
+      "ServiceName": "BookingService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/TicketBooking/SearchEmail",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+
+   
+    {
+
+      "DownstreamPathTemplate": "/api/TicketBooking/GetAll",
+      "DownstreamScheme": "https",
+      "ServiceName": "BookingService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/TicketBooking/GetAll",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+    {
+
+      "DownstreamPathTemplate": "/api/TicketBooking/GetAllBooking/{id}",
+      "DownstreamScheme": "https",
+      "ServiceName": "BookingService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/TicketBooking/GetAllBooking/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+
+    },
+
+
+    {
+
+      "DownstreamPathTemplate": "/api/TicketBooking/CancelBooking",
+      "DownstreamScheme": "https",
+      "ServiceName": "BookingService",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/TicketBooking/CancelBooking",
+      "UpstreamHttpMethod": [ "Put" ]
+
+    }
+
+
+  ]
+}
